@@ -12,8 +12,8 @@ Battle::Battle(Character* &character, Enemy* &enemy) : character(character), ene
 		<< "You(" << character->getName()
 		<< ") are now going to fight "
 		<< enemy->getName() << " the "
-		<< enemy->getType() << endl
-		<< "You have the following stats" << endl;
+		<< enemy->getType() << "!" << endl
+		<< "You have the following stats:" << endl;
 	character->printBattleStats();
 
 	vector<double> attributes = character->getAttributes();
@@ -77,12 +77,12 @@ void Battle::nextTurn()
 	{
 		if ((turn - 1) % 2 == 0) //Stats for player
 		{
-			cout << "Results after turn " << turn - 1 << " for " << character->getName() << " :" << endl;
+			cout << "Results after turn " << turn - 1 << " for " << character->getName() << ":" << endl;
 			character->printBattleStats();
 		}
 		else //Stats for enemy
 		{
-			cout << "Results after turn " << turn - 1 << " for " << enemy->getName() << " the " << enemy->getType() << " :" << endl;
+			cout << "Results after turn " << turn - 1 << " for " << enemy->getName() << " the " << enemy->getType() << ":" << endl;
 			enemy->printBattleStats();
 		}
 
