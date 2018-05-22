@@ -24,7 +24,7 @@ void BountyHunter::levelUp()
 	Character::levelUp();
 
 	agility += 4;
-	cout << "Agility: " << agility << endl;
+	cout << "Agility: " << round(agility) << endl;
 }
 
 std::vector<double> BountyHunter::getAttributes() const

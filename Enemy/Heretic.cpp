@@ -21,8 +21,6 @@ void Heretic::attack(const Battle &battle)
 			lowest_attribute = attributes[i];
 	}
 
-
-	cout << lowest_attribute << endl;
 	character->defend(lowest_attribute);
 }
 

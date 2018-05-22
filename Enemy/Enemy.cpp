@@ -15,7 +15,7 @@ void Enemy::defend(double attackPts)
 
 void Enemy::printBattleStats()
 {
-	cout << "HP: " << HP << endl;
+	cout << "HP: " << round(HP) << endl;
 }
 
 bool Enemy::isDead() const
@@ -48,7 +48,7 @@ string Enemy::getRandomEnemyName(vector<string> &enemy_names)
 	string name = "no_name";
 
 	size_t number_of_names = enemy_names.size();
-	cout << number_of_names << endl;
+
 	if (number_of_names != 0)
 	{
 		size_t name_index = rand() % number_of_names;

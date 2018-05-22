@@ -32,13 +32,13 @@ Battle::Battle(Character* &character, Enemy* &enemy) : character(character), ene
 			cout << "Agility: ";
 			break;
 		}
-		cout << attributes[i] << endl;
+		cout << round(attributes[i]) << endl;
 	}
 
 	cout << "This monster has the following stats:" << endl
-		<< "HP: " << enemy->getHP() << endl
-		<< "Strength: " << enemy->getStrength() << endl
-		<< "Intelligence: " << enemy->getIntelligence() << endl
+		<< "HP: " << round(enemy->getHP()) << endl
+		<< "Strength: " << round(enemy->getStrength()) << endl
+		<< "Intelligence: " << round(enemy->getIntelligence()) << endl
 		<< "Good luck!" << endl << endl;
 }
 

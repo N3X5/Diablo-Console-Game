@@ -23,24 +23,25 @@ void Character::defend(double attackPts)
 void Character::levelUp()
 {
 	level++;
+	killed_enemies = 0;
 	cout << endl << "Congratulations, you are now level " << level << "!" << endl;
 
-	HP += HP*0.1;
+	HP += round(HP*0.1);
 
 	double initial_points = strength_initial + intelligence_initial;
 
-	strength = (initial_points / 14) * 5 + strength;
-	intelligence = (initial_points / 14) * 5 + intelligence;
+	strength += round((strength_initial / initial_points) * 5);
+	intelligence += round((intelligence_initial / initial_points) * 5);
 
 	cout << "Updated stats:" << endl
-		<< "HP: " << HP << endl
-		<< "Strength: " << strength << endl
-		<< "Intelligence: " << intelligence << endl;
+		<< "HP: " << round(HP) << endl
+		<< "Strength: " << round(strength) << endl
+		<< "Intelligence: " << round(intelligence) << endl;
 }
 
 void Character::printBattleStats()
 {
-	cout << "HP: " << HP << endl;
+	cout << "HP: " << round(HP) << endl;
 }
 
 void Character::addKill()

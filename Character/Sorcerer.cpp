@@ -9,13 +9,12 @@ Sorcerer::~Sorcerer() {}
 
 void Sorcerer::attack(const Battle & battle)
 {
-	//Placeholder
-	double attackPts = 5; //To implement
+	double attackPts = (0.5*((mana / mana_max)*0.75) + (mana / mana_max)*0.75) + intelligence;
 
 	battle.getEnemy()->defend(attackPts);
 
 	mana -= 0.1*mana_max;
-	if (mana < 0)
+	if (mana < 1)
 		mana = 0;
 }
 
@@ -23,15 +22,15 @@ void Sorcerer::levelUp()
 {
 	Character::levelUp();
 
-	mana_max += mana_max / 10;
+	mana_max += round(mana_max / 10);
 	mana = mana_max;
-	cout << "Mana: " << mana << "/" << mana_max << endl;
+	cout << "Mana: " << round(mana) << "/" << round(mana_max) << endl;
 }
 
 void Sorcerer::printBattleStats()
 {
 	Character::printBattleStats();
-	cout << "Mana: " << mana << "/" << mana_max << endl;
+	cout << "Mana: " << round(mana) << "/" << round(mana_max) << endl;
 }
 
 void Sorcerer::addKill()
