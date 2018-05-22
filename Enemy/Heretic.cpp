@@ -1,5 +1,6 @@
 #include "Heretic.h"
 #include "Character.h"
+#include <iostream>
 
 using namespace std;
 
@@ -9,10 +10,20 @@ Heretic::~Heretic() {}
 
 void Heretic::attack(const Battle &battle)
 {
-	//TODO: Implement attack
-	
-	//Placeholder
-	battle.getCharacter()->defend(2);
+	Character* &character = battle.getCharacter();
+
+	vector<double> attributes = character->getAttributes();
+	double lowest_attribute = INT_MAX;
+
+	for (size_t i = 0; i < attributes.size(); i++) 
+	{
+		if (attributes[i] < lowest_attribute)
+			lowest_attribute = attributes[i];
+	}
+
+
+	cout << lowest_attribute << endl;
+	character->defend(lowest_attribute);
 }
 
 string Heretic::getType() const

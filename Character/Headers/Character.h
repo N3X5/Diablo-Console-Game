@@ -29,6 +29,8 @@ public:
 	double getIntelligence() const;
 	double getStrength() const;
 
+	virtual std::vector<double> getAttributes() const; //Returns intelligence, strength and agility (only with the bounty hunter). Used by heretic
+
 protected:
 	std::string name;
 	unsigned short level;

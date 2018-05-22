@@ -15,9 +15,27 @@ Battle::Battle(Character* &character, Enemy* &enemy) : character(character), ene
 		<< enemy->getType() << endl
 		<< "You have the following stats" << endl;
 	character->printBattleStats();
-	cout << "Strength: " << character->getStrength() << endl
-		<< "Intelligence: " << character->getIntelligence() << endl
-		<< "This monster has the following stats:" << endl
+
+	vector<double> attributes = character->getAttributes();
+
+	for (size_t i = 0; i < attributes.size(); i++) 
+	{
+		switch(i) 
+		{
+		case 0:
+			cout << "Strength: ";
+			break;
+		case 1:
+			cout << "Intelligence: ";
+			break;
+		case 2:
+			cout << "Agility: ";
+			break;
+		}
+		cout << attributes[i] << endl;
+	}
+
+	cout << "This monster has the following stats:" << endl
 		<< "HP: " << enemy->getHP() << endl
 		<< "Strength: " << enemy->getStrength() << endl
 		<< "Intelligence: " << enemy->getIntelligence() << endl

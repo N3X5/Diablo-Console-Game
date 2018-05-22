@@ -10,6 +10,7 @@ public:
 	~BountyHunter();
 	void attack(const Battle &);
 	void levelUp();
+	std::vector<double> getAttributes() const;
 private:
 	double agility;
 };

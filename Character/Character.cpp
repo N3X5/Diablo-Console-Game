@@ -75,3 +75,10 @@ double Character::getStrength() const
 {
 	return strength;
 }
+
+std::vector<double> Character::getAttributes() const
+{
+	vector<double> attributes = { strength, intelligence };
+
+	return attributes;
+}
