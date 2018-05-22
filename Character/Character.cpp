@@ -54,7 +54,7 @@ void Character::addKill()
 
 bool Character::isDead() const
 {
-	return HP<=0;
+	return round(HP)<=0;
 }
 
 string Character::getName() const

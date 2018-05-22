@@ -20,7 +20,7 @@ void Enemy::printBattleStats()
 
 bool Enemy::isDead() const
 {
-	return HP<=0;
+	return round(HP)<=0;
 }
 
 double Enemy::getHP() const
