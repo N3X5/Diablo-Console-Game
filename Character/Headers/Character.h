@@ -13,7 +13,7 @@ public:
 		double, double,
 		double);
 
-	~Character();
+	virtual ~Character();
 
 	virtual void attack(const Battle &) = 0;
 	virtual void defend(double);

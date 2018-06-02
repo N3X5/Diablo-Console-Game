@@ -7,7 +7,7 @@ class Heretic : public Enemy
 {
 public:
 	Heretic(std::string, double = 20, double = 1, double = 4);
-	~Heretic();
+	virtual ~Heretic();
 	void attack(const Battle &);
 	std::string getType() const;
 };

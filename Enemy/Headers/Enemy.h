@@ -9,7 +9,7 @@ class Enemy
 {
 public:
 	Enemy(std::string, double, double, double);
-	~Enemy();
+	virtual ~Enemy();
 
 	virtual void attack(const Battle &) = 0;
 	virtual void defend(double);
