@@ -4,7 +4,7 @@
 #include "Heretic.h"
 #include "Skeleton.h"
 
-class Diablo : public Enemy, public Heretic, public Skeleton
+class Diablo : public Heretic, public Skeleton
 {
 public:
 	Diablo(std::string);

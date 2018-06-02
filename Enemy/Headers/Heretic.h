@@ -3,7 +3,7 @@
 
 #include "Enemy.h"
 
-class Heretic : public Enemy
+class Heretic : public virtual Enemy
 {
 public:
 	Heretic(std::string, double = 20, double = 1, double = 4);

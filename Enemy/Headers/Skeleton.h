@@ -3,7 +3,7 @@
 
 #include "Enemy.h"
 
-class Skeleton : public Enemy
+class Skeleton : public virtual Enemy
 {
 public:
 	Skeleton(std::string, double = 32, double = 3, double = 0);
